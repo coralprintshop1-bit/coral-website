@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
   <title>Coral Print Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: #0b1f3a;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .footer {
+      background: #0b1f3a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
 </head>
-<body style="font-family:sans-serif; text-align:center; padding:50px;">
-  <h1>Coral Print Shop</h1>
-  <p>Jasa Printing & Desain Terpercaya</p>
-  <a href="https://wa.me/6281385222283">Order Sekarang</a>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Coral Print Shop</h1>
+    <p>Jasa Printing & Desain Berkualitas</p>
+    <a class="btn" href="https://wa.me/6281385222283">Order Sekarang</a>
+  </div>
+
+  <!-- LAYANAN -->
+  <div class="section">
+    <h2>Layanan Kami</h2>
+    <div class="services">
+      <div class="card">Banner & Spanduk</div>
+      <div class="card">Sticker & Label</div>
+      <div class="card">Kartu Nama</div>
+      <div class="card">Desain Custom</div>
+    </div>
+  </div>
+
+  <!-- GALERI -->
+  <div class="section gallery">
+    <h2>Hasil Cetak</h2>
+    <img src="https://via.placeholder.com/200">
+    <img src="https://via.placeholder.com/200">
+    <img src="https://via.placeholder.com/200">
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 Coral Print Shop</p>
+  </div>
+
+  <!-- WA FLOAT -->
+  <a class="wa-float" href="https://wa.me/6281385222283">WA</a>
+
 </body>
 </html>
