@@ -91,16 +91,19 @@ body {
   gap: 20px;
 }
 
-.card {
-  background: #f4f4f4;
-  padding: 25px;
-  border-radius: 12px;
-  width: 250px;
-  transition: 0.3s;
+.card img {
+  width:120px;
+  height:120px;
+  border-radius:20px;
+  object-fit:cover;
+  display:block;
+  margin:0 auto 10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card:hover img {
+  transform:scale(1.05);
 }
 
 /* GALERI */
@@ -176,12 +179,36 @@ body {
 <div class="section" id="layanan">
   <h2>Layanan Kami</h2>
   <div class="services">
-    <div class="card">Banner & Spanduk</div>
-    <div class="card">Sticker & Label</div>
-    <div class="card">Kartu Nama</div>
-    <div class="card">Desain Custom</div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/2.png" style="width:100%; border-radius:10px;">
+    <h3>Banner & Spanduk</h3>
   </div>
-</div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/4.png" style="width:100%; border-radius:10px;">
+    <h3>Stempel Flash</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/3.png" style="width:100%; border-radius:10px;">
+    <h3>Kartu Nama</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/5.png" style="width:100%; border-radius:10px;">
+    <h3>Brosur</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/6.png" style="width:100%; border-radius:10px;">
+    <h3>Mug</h3>
+  </div>
+    
+<div class="card">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/7.png" style="width:100%; border-radius:10px;">
+    <h3>Sablon Kaos</h3>
+  </div>
 
 <!-- GALERI -->
 <div class="section gallery" id="galeri">
