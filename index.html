@@ -10,6 +10,50 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
+  
+.container-dua {
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  padding:50px 20px;
+}
+
+/* KIRI */
+.kiri {
+  flex:2;
+}
+
+/* GALERI GRID */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:15px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:12px;
+}
+
+/* KANAN (BOX BIRU) */
+.kanan {
+  flex:1;
+  background:#0b1f3a;
+  color:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.kanan a {
+  display:inline-block;
+  margin-top:15px;
+  background:white;
+  color:#0b1f3a;
+  padding:10px 15px;
+  border-radius:6px;
+  text-decoration:none;
+}
 
 /* NAVBAR */
 .navbar {
@@ -203,19 +247,26 @@ body {
     <h3>Sablon Kaos</h3>
   </div>
 
-<!-- GALERI -->
-<div class="section gallery" id="galeri">
-  <h2>Hasil Cetak Kami</h2>
-  <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Voucher.jpg">
-  <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Nametag.jpg">
-  <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Banner.jpg">
-</div>
-
 <!-- CTA -->
-<div class="cta" id="kontak">
-  <h2>Butuh Cetak Cepat?</h2>
-  <p>Langsung hubungi kami sekarang juga</p>
-  <a href="https://wa.me/6281385222283">Chat WhatsApp</a>
+<div class="container-dua">
+
+  <!-- KIRI -->
+  <div class="kiri">
+    <h2>Hasil Cetak Kami</h2>
+
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Voucher.jpg">
+      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Nametag.jpg">
+      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Banner.jpg">
+    </div>
+
+  <!-- KANAN -->
+  <div class="kanan">
+    <h2>Butuh Cetak Cepat?</h2>
+    <p>Langsung hubungi kami sekarang juga</p>
+    <a href="https://wa.me/6281385222283">Chat WhatsApp</a>
+  </div>
+
 </div>
 
 <div class="section">
