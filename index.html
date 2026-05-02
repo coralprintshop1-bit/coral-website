@@ -19,11 +19,41 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
-body{
-background:#f8f9fb;
-color:#222;
+    .running-text{
+background:#ff3b3b;
+color:white;
+padding:12px 0;
+overflow:hidden;
+white-space:nowrap;
+font-weight:600;
+position:relative;
 }
 
+.running-content{
+display:inline-block;
+padding-left:100%;
+animation:jalan 15s linear infinite;
+}
+
+@keyframes jalan{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+.running-content:hover{
+animation-play-state:paused;
+}
+    
+}
+body{
+background:#111827;
+color:white;
+}
+    
 /* NAVBAR */
 
 .navbar{
@@ -414,6 +444,20 @@ font-size:32px;
 
 <body>
 
+<div class="running-text">
+
+<div class="running-content">
+
+🔥 Senin - Kamis : 08.00 - 21.00 WIB 🔥 Jum'at - Sabtu : 08.00 - 18.00 WIB 
+•
+Free Konsultasi
+•
+Order via WhatsApp
+
+</div>
+
+</div>
+    
 <!-- NAVBAR -->
 
 <nav class="navbar">
@@ -472,7 +516,7 @@ Lihat Produk
 </div>
 
 <div class="hero-image">
-<img src="hero.jpg">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Gambar.png">
 </div>
 
 </section>
@@ -522,7 +566,7 @@ Lihat Produk
 </div>
 
 <div class="layanan-card">
-<img src="https://github.com/coralprintshop1-bit/coral-website/blob/main/3.png">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/3.png">
 <h3>Kartu Nama</h3>
 <p>Desain profesional untuk bisnis kamu.</p>
 </div>
@@ -550,7 +594,7 @@ Lihat Produk
 
 <div class="produk-card">
 
-<img src="produk1.jpg">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/p%20banner.png">
 
 <div class="produk-content">
 
@@ -570,7 +614,7 @@ Pesan via WhatsApp
 
 <div class="produk-card">
 
-<img src="produk2.jpg">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/p%20kartu%20nama.png">
 
 <div class="produk-content">
 
@@ -590,7 +634,7 @@ Pesan via WhatsApp
 
 <div class="produk-card">
 
-<img src="produk3.jpg">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/p%20sticker.png">
 
 <div class="produk-content">
 
