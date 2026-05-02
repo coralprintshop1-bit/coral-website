@@ -1,374 +1,736 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Coral Print Shop</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-  
-.container-dua {
-  display:flex;
-  gap:40px;
-  align-items:stretch;
-  padding:50px 20px;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-/* KIRI */
-.kiri {
-  flex:2;
-}
-
-/* GALERI GRID */
-.gallery {
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:15px;
-}
-
-.gallery img {
-  width:100%;
-  border-radius:12px;
-}
-
-/* KANAN (BOX BIRU) */
-.kanan {
-  flex:1;
-  background:#0b1f3a;
-  color:white;
-  padding:30px;
-  border-radius:12px;
-  text-align:center;
-}
-
-.kanan a {
-  display:inline-block;
-  margin-top:15px;
-  background:white;
-  color:#0b1f3a;
-  padding:10px 15px;
-  border-radius:6px;
-  text-decoration:none;
+body{
+background:#f8f9fb;
+color:#222;
 }
 
 /* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+.navbar{
+width:100%;
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,0.04);
 }
 
-.logo img {
- height:100px;
-  object-fit:contain;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.menu {
-  display: flex;
-  gap: 25px;
+.logo img{
+width:170px;
 }
 
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+.menu{
+display:flex;
+gap:35px;
 }
 
-.menu a:hover {
-  color: #0b1f3a;
+.menu a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+transition:0.3s;
 }
 
-.btn-nav {
-  background: #0b1f3a;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+.menu a:hover{
+color:#ff6b6b;
+}
+
+.order-btn{
+background:#ff6b6b;
+padding:14px 24px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-weight:600;
 }
 
 /* HERO */
-.hero {
-  background: linear-gradient(to right, #0b1f3a, #163d6b);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+background:#fff5f5;
+gap:50px;
 }
 
-.hero h1 {
-  font-size: 42px;
+.hero-text{
+flex:1;
 }
 
-.hero p {
-  margin: 15px 0;
+.label{
+background:#ffdfdf;
+color:#ff6b6b;
+padding:10px 18px;
+border-radius:50px;
+display:inline-block;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
 }
 
-.btn {
-  background: white;
-  color: #0b1f3a;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+.hero-text h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:#ff6b6b;
+}
+
+.hero-text p{
+color:#666;
+line-height:1.8;
+margin-bottom:30px;
+max-width:550px;
+}
+
+.hero-btn{
+display:flex;
+gap:15px;
+}
+
+.btn1{
+background:#ff6b6b;
+padding:15px 28px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn2{
+border:2px solid #ff6b6b;
+padding:15px 28px;
+border-radius:12px;
+color:#ff6b6b;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:550px;
+border-radius:25px;
+}
+
+/* FITUR */
+
+.fitur{
+padding:40px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+background:white;
+}
+
+.fitur-box{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.04);
+text-align:center;
+}
+
+.fitur-box h3{
+margin-top:10px;
+margin-bottom:10px;
 }
 
 /* SECTION */
-.section {
-  padding: 80px 20px;
-  text-align: center;
+
+.section{
+padding:80px 8%;
 }
 
-.services {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
+.section-title{
+text-align:center;
+margin-bottom:50px;
 }
 
-.card img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  display:block;
-  margin:0 auto 10px;
+.section-title h2{
+font-size:40px;
+margin-bottom:10px;
 }
 
-.card:hover img {
-  transform:scale(1.05);
+.section-title p{
+color:#777;
 }
 
-/* GALERI */
-.gallery img {
-  width: 220px;
-  margin: 10px;
-  border-radius: 10px;
+/* LAYANAN */
+
+.layanan-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.layanan-card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.layanan-card:hover{
+transform:translateY(-10px);
+}
+
+.layanan-card img{
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+/* PRODUK */
+
+.produk-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.produk-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.produk-card:hover{
+transform:translateY(-10px);
+}
+
+.produk-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.produk-content{
+padding:20px;
+}
+
+.produk-content h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#ff6b6b;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.produk-content a{
+display:block;
+background:#ff6b6b;
+padding:12px;
+text-align:center;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+/* TESTIMONI */
+
+.testi-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.testi-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.testi-card h4{
+margin-top:20px;
 }
 
 /* CTA */
-.cta {
-  background: #0b1f3a;
-  color: white;
-  padding: 60px 20px;
+
+.cta{
+margin:80px 8%;
+background:#ff6b6b;
+padding:50px;
+border-radius:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+gap:30px;
 }
 
-.cta a {
-  background: white;
-  color: #0b1f3a;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+.cta a{
+background:white;
+padding:15px 25px;
+border-radius:12px;
+text-decoration:none;
+color:#ff6b6b;
+font-weight:700;
 }
 
 /* FOOTER */
-.footer {
-  background:#f8f8f8;
-  padding:70px 20px 20px;
-  margin-top:80px;
+
+.footer{
+background:#111827;
+padding:70px 8% 30px;
+color:white;
 }
 
-.footer-container {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
-
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
 }
 
-.footer-box h3 {
-  margin-bottom:20px;
-  color:#0b1f3a;
+.footer-logo{
+width:180px;
+margin-bottom:20px;
 }
 
-.footer-box p,
-.footer-box a {
-  color:#555;
-  line-height:1.8;
-  text-decoration:none;
-  display:block;
+.footer h3,
+.footer h4{
+margin-bottom:20px;
 }
 
-.footer-box a:hover {
-  color:#0b1f3a;
+.footer p,
+.footer a{
+color:#d1d5db;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+line-height:1.8;
 }
 
-.footer-logo {
-  width:180px;
-  margin-bottom:20px;
-}
-
-.footer-bottom {
-  text-align:center;
-  margin-top:50px;
-  padding-top:20px;
-  border-top:1px solid #ddd;
-  color:#777;
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,0.1);
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+color:#aaa;
 }
 
 /* WA FLOAT */
-.wa {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
+
+.wa-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero-btn{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.cta{
+flex-direction:column;
+text-align:center;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Logo%20Coral.png" style="height:100px; vertical-align:middle;">
-  </div>
-  
-   <div class="menu">
-    <a href="#">Home</a>
-    <a href="#layanan">Layanan</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
-  </div>
 
-  <a class="btn-nav" href="https://wa.me/6281385222283">Order</a>
+<nav class="navbar">
+
+<div class="logo">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/logo%20coral.png">
 </div>
+
+<div class="menu">
+<a href="#">Beranda</a>
+<a href="#">Produk</a>
+<a href="#">Custom Design</a>
+<a href="#">Portfolio</a>
+<a href="#">Testimoni</a>
+<a href="#">Kontak</a>
+</div>
+
+<a href="https://wa.me/6281385222283" class="order-btn">
+Order via WhatsApp
+</a>
+
+</nav>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Jasa Cetak Banner, Sticker & Kartu Nama</h1>
-  <p>Cetak Cepat 1 Hari Jadi • Harga Terjangkau • Kualitas Premium</p>
-  <a class="btn" href="https://wa.me/6281385222283">Order Sekarang</a>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span class="label">
+CORAL PRINT SHOP
+</span>
+
+<h1>
+Cetak Cepat, <br>
+<span>Hasil Mantap!</span>
+</h1>
+
+<p>
+Solusi cetak berkualitas dengan hasil tajam,
+warna cerah, dan pengerjaan cepat sesuai kebutuhanmu.
+</p>
+
+<div class="hero-btn">
+
+<a href="https://wa.me/6281385222283" class="btn1">
+Pesan Sekarang
+</a>
+
+<a href="#" class="btn2">
+Lihat Produk
+</a>
+
 </div>
+
+</div>
+
+<div class="hero-image">
+<img src="hero.jpg">
+</div>
+
+</section>
+
+<!-- FITUR -->
+
+<section class="fitur">
+
+<div class="fitur-box">
+<h3>⚡ Pengerjaan Cepat</h3>
+<p>1 Hari Jadi</p>
+</div>
+
+<div class="fitur-box">
+<h3>🏆 Kualitas Terjamin</h3>
+<p>Warna tajam & tahan lama</p>
+</div>
+
+<div class="fitur-box">
+<h3>💰 Harga Terjangkau</h3>
+<p>Mulai Rp25.000</p>
+</div>
+
+</section>
 
 <!-- LAYANAN -->
-<div class="section" id="layanan">
-  <h2>Layanan Kami</h2>
-  <div class="services">
 
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/2.png" style="width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Banner & Spanduk</h3>
-  </div>
+<section class="section">
 
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/4.png" style=""width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Stempel Flash</h3>
-  </div>
+<div class="section-title">
+<h2>Layanan Kami</h2>
+<p>Berbagai kebutuhan cetak bisa kamu temukan di sini</p>
+</div>
 
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/3.png" style=""width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Kartu Nama</h3>
-  </div>
+<div class="layanan-grid">
 
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/5.png" style=""width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Brosur</h3>
-  </div>
+<div class="layanan-card">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/2.png">
+<h3>Banner & Spanduk</h3>
+<p>Cetak banner berbagai ukuran dengan kualitas tajam.</p>
+</div>
 
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/6.png" style=""width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Mug</h3>
-  </div>
-    
-<div class="card">
-    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/7.png" style=""width:120px; height:120px; border-radius:50%; object-fit:cover;">
-    <h3>Sablon Kaos</h3>
-  </div>
+<div class="layanan-card">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/1.jpeg">
+<h3>Sticker</h3>
+<p>Sticker custom cutting rapi dan tahan lama.</p>
+</div>
 
-<!-- CTA -->
-<div class="container-dua">
+<div class="layanan-card">
+<img src="https://github.com/coralprintshop1-bit/coral-website/blob/main/3.png">
+<h3>Kartu Nama</h3>
+<p>Desain profesional untuk bisnis kamu.</p>
+</div>
 
-  <!-- KIRI -->
-  <div class="kiri">
-    <h2>Hasil Cetak Kami</h2>
-
-    <div class="gallery">
-      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Voucher.jpg">
-      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Nametag.jpg">
-      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/Banner.jpg">
-    </div>
-
-  <!-- KANAN -->
-  <div class="kanan">
-    <h2>Butuh Cetak Cepat?</h2>
-    <p>Langsung hubungi kami sekarang juga</p>
-    <a href="https://wa.me/6281385222283">Chat WhatsApp</a>
-  </div>
+<div class="layanan-card">
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/5.png">
+<h3>Brosur</h3>
+<p>Brosur supaya brand kamu lebih dikenal.</p>
+</div>
 
 </div>
-  
-<!-- FOOTER -->
-</div> <!-- penutup section -->
 
-<!-- WA FLOAT -->
-<a class="wa" href="https://wa.me/6281385222283">WA</a>
+</section>
+
+<!-- PRODUK -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Produk Best Seller</h2>
+<p>Produk favorit pelanggan Coral Print Shop</p>
+</div>
+
+<div class="produk-grid">
+
+<div class="produk-card">
+
+<img src="produk1.jpg">
+
+<div class="produk-content">
+
+<h3>Banner Flexi 340gsm</h3>
+
+<p class="price">
+Mulai dari Rp35.000/m²
+</p>
+
+<a href="https://wa.me/6281385222283">
+Pesan via WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="produk-card">
+
+<img src="produk2.jpg">
+
+<div class="produk-content">
+
+<h3>Sticker Vinyl Glossy</h3>
+
+<p class="price">
+Mulai dari Rp13.000/lbr
+</p>
+
+<a href="https://wa.me/6281385222283">
+Pesan via WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="produk-card">
+
+<img src="produk3.jpg">
+
+<div class="produk-content">
+
+<h3>Kartu Nama Art Carton</h3>
+
+<p class="price">
+Mulai dari Rp40.000/box
+</p>
+
+<a href="https://wa.me/6281385222283">
+Pesan via WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONI -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Testimoni Pelanggan</h2>
+<p>Apa kata mereka tentang Coral Print Shop</p>
+</div>
+
+<div class="testi-grid">
+
+<div class="testi-card">
+<p>
+"Cetak bannernya bagus banget,
+warna tajam dan cepat selesai!"
+</p>
+
+<h4>Sarah A.</h4>
+</div>
+
+<div class="testi-card">
+<p>
+"Sticker cutting rapi dan kualitas mantap,
+recommended!"
+</p>
+
+<h4>Andi Putra</h4>
+</div>
+
+<div class="testi-card">
+<p>
+"Admin fast respon dan hasil cetak premium."
+</p>
+
+<h4>Rizky</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div>
+<h2>Siap Cetak Hari Ini?</h2>
+<p>
+Konsultasi gratis dan dapatkan penawaran terbaik sekarang.
+</p>
+</div>
+
+<a href="https://wa.me/6281385222283">
+Hubungi via WhatsApp
+</a>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
-  <div class="footer-container">
+<div class="footer-grid">
 
-    <!-- KOLOM 1 -->
-    <div class="footer-box">
-      <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/logo%20coral.png" class="footer-logo">
+<div>
 
-      <p>
-        Coral Print Shop siap membantu semua
-        kebutuhan cetakmu dengan kualitas terbaik
-        dan pelayanan yang memuaskan
-      </p>
-    </div>
+<img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/logo%20coral.png" class="footer-logo">
 
-    <!-- KOLOM 2 -->
-    <div class="footer-box">
-      <h3>Menu</h3>
+<p>
+Coral Print Shop siap membantu semua kebutuhan cetakmu
+dengan kualitas terbaik dan pelayanan memuaskan.
+</p>
 
-      <a href="#">About Us</a>
-      <a href="#">Layanan</a>
-      <a href="#">Galeri</a>
-      <a href="#">Kontak</a>
-    </div>
+</div>
 
-    <!-- KOLOM 3 -->
-    <div class="footer-box">
-      <h3>Customer Service</h3>
+<div>
 
-      <p>📱 WhatsApp (0813-8522-2283</p>
-      <p>📧 (coralprintshop@gmail.com)</p>
-    </div>
+<h4>Menu</h4>
 
-    <!-- KOLOM 4 -->
-    <div class="footer-box">
-      <h3>Location</h3>
+<a href="#">Beranda</a>
+<a href="#">Produk</a>
+<a href="#">Portfolio</a>
+<a href="#">Kontak</a>
 
-      <p>
-        Jl. WR Supratman No. 39E, Kel. Cemp. Putih, Kec. Ciputat Tim.<br>
-        Tangerang Selatan, Banten 15412 (Sebrang Masjid Jami Al-Istiqomah)
-      </p>
-    </div>
+</div>
 
-  </div>
+<div>
 
-  <div class="footer-bottom">
-    © 2026 Coral Print Shop. All rights reserved.
-  </div>
+<h4>Kontak Kami</h4>
+
+<p>📱 0813-8522-2283</p>
+<p>📧 coralprintshop@gmail.com</p>
+<p>🕒 Senin - Minggu</p>
+
+</div>
+
+<div>
+
+<h4>Jl. WR Supratman No.39E, Cemp. Putih, Kec. Ciputat Tim.</h4>
+
+<p>
+Tangerang Selatan, Banten 15412
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Coral Print Shop. All Rights Reserved.
+</div>
 
 </footer>
-    
+
+<!-- WA FLOAT -->
+
+<a href="https://wa.me/6281385222283" style="position:fixed;bottom:20px;right:20px;z-index:999;">
+    <img src="https://raw.githubusercontent.com/coralprintshop1-bit/coral-website/refs/heads/main/logo%20wa.png" width="60" height="60">
+</a>
+
 </body>
 </html>
